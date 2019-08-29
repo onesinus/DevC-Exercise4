@@ -1,0 +1,82 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+/*	background-color: #35db61;*/
+    background-image: linear-gradient(gray,green);
+
+}
+
+.header{
+	background-color: blue;
+	height: 5vh;
+	padding: 10px 50px;
+	text-align: center;
+	font-size: 16pt;
+	color: white;
+}
+
+
+.header-2{
+	background-color: blue;
+	height: 3vh;
+	padding: 10px 50px;
+	text-align: center;
+	font-size: 14pt;
+	color: white;
+}
+
+
+.content{
+	height: 75vh;
+	padding: 10px;
+}
+
+.footer{
+	background-color: blue;
+	height: 5vh;
+	padding: 10px 0;
+	color: white;
+	text-align: center;
+}
+
+.coret{
+  text-decoration-line: line-through;
+}
+
+.foto{
+	float: left;
+	width: 7vw;
+	margin-right: 10px;
+}
+
+.curhatan{
+	font-size: 12pt;
+}
+
+.fs-14{
+	font-size: 14pt;
+}
+
+.form-control{
+	margin-bottom: 1vh;
+}
+
+.form-control > label{
+	color: white;
+}
+
+.form-control > input{
+	display: block;
+	border: 1px solid gray;
+	border-radius: 5px;
+	height: 3vh;
+	width: 20vw;
+}
+
+input[type="submit"]{
+	width: 20vw;
+	height: 5vh;
+	border-radius: 5px;
+}

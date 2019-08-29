@@ -1,0 +1,74 @@
+body{
+	font-family: 'Open Sans Condensed', 'Roboto', 'Noto Sans', sans-serif;
+	color: white;
+	background-color: #000033;
+}
+
+#header{
+	background: #00a099;
+}
+
+#foto{
+	float: left;
+	margin-right: 1%;
+}
+
+#moto{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#moto:hover{
+	background: #69807e;
+}
+
+#content{
+	margin: 1%;
+	display: inline-block;
+}
+
+#information{
+	text-indent: 1%;
+}
+
+#pendidikan{
+	float: left;
+	margin: 0 5%;
+
+}
+
+#contact_me{
+	text-align: center;
+	clear: both;
+	background: #69807e;
+}
+
+#contact_me:hover{
+	background: #00a099;	
+}
+
+#footer{
+	text-align: center;
+	clear: both;
+	background: #00a099;
+}
+
+#footer:hover{
+	background: #69807e;
+}
+
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+
+#sosial_media img{
+	height: 100px;
+	margin: 3% 5%;
+}
+
+#sosial_media img:hover{
+	height: 90px;
+}

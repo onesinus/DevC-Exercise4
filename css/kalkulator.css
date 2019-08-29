@@ -1,0 +1,27 @@
+.button-box > button{
+	height: 10vh;
+	width: 24vw;
+	margin-left: -1%;
+	border-radius: 0;
+	border: 1px solid white;
+}
+
+.calculator{
+	margin-left: 3%;
+}
+
+.ta-center{
+	text-align: center;
+}
+
+.ta-right{
+	text-align: right;
+}
+
+.hasil{
+	height: 5vh;
+	font-size: 18pt;
+	border: 1px solid grey;
+	width: 94vw;
+	margin-left: 2%;
+}

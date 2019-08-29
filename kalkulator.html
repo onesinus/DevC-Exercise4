@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator Legenda</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/kalkulator.css">
+	<script type="text/javascript" src="js/fa.js"></script>
+</head>
+<body onkeypress="addByKeyboard()" onkeydown="backspace()">
+	
+	<h1 class="ta-center">
+		<i class='fas fa-calculator' style='font-size:40px;color:red'></i>
+		Mantul Kalkulator
+	</h1>
+    <div id="hasil" class="hasil ta-right"></div>
+	<div class="calculator">
+		<div class="button-box">
+			<button class="btn btn-secondary">%</button>
+			<button class="btn btn-secondary"><i class="fas fa-square-root-alt"></i></button>
+			<button class="btn btn-secondary">X2</button>
+			<button class="btn btn-secondary">1/X</button>
+		</div>
+		<div class="button-box">
+			<button onclick="bersihkan()" class="btn btn-primary">CE</button>
+			<button onclick="bersihkan()" class="btn btn-primary">C</button>
+			<button onclick="backspaceBtn()" class="btn btn-primary"><i class='fas fa-arrow-alt-circle-left'></i></button>
+			<button onclick="divideBtn()" class="btn btn-primary"><i class='fas fa-divide'></i></button>
+		</div>
+		<div class="button-box">
+			<button onclick="addNumberToBox(7)" class="btn btn-info">7</button>
+			<button onclick="addNumberToBox(8)" class="btn btn-info">8</button>
+			<button onclick="addNumberToBox(9)" class="btn btn-info">9</button>
+			<button onclick="addMultiply()" class="btn btn-info"><i class='fas fa-times'></i></button>
+		</div>
+		<div class="button-box">
+			<button onclick="addNumberToBox(4)" class="btn btn-info">4</button>
+			<button onclick="addNumberToBox(5)" class="btn btn-info">5</button>
+			<button onclick="addNumberToBox(6)" class="btn btn-info">6</button>
+			<button onclick="addMinus()" class="btn btn-info"><i class='fas fa-minus'></i></button>
+		</div>
+		<div class="button-box">
+			<button onclick="addNumberToBox(1)" class="btn btn-info">1</button>
+			<button onclick="addNumberToBox(2)" class="btn btn-info">2</button>
+			<button onclick="addNumberToBox(3)" class="btn btn-info">3</button>
+			<button onclick="addPlus()" class="btn btn-primary"><i class='fas fa-plus'></i></button>
+		</div>
+		<div class="button-box">
+			<button class="btn btn-secondary">+-</button>
+			<button onclick="addNumberToBox(0)" class="btn btn-info">0</button>
+			<button onclick="addComma()" class="btn btn-success">,</button>
+			<button onclick="hitungHasil()" class="btn btn-primary"><i class='fas fa-equals'></i></button>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/kalkulator.js"></script>
+</body>
+</html>

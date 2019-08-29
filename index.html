@@ -8,6 +8,23 @@
   	<link rel="stylesheet" type="text/css" href="css/custom.css">
   	<script src="js/jquery.min.js"></script>
   	<script src="js/bootstrap.min.js"></script>
+  	<script type="text/javascript">
+		$("#sendMessage").click(function() {
+			console.log("Tst");
+			let name 	= $("#name").val();
+			let email 	= $("#email").val();
+			let message = $("#message").val();
+			console.log(name + " " + email + " " + message);
+
+
+		    $.ajax({
+		        url: "//formspree.io/kodekite@gmail.com", 
+		        method: "POST",
+		        data: {message: message, email: email, name:name},
+		        dataType: "json"
+		    });
+		});  		
+  	</script>
 </head>
 <body>
     <!-- Fixed navbar -->
@@ -20,23 +37,26 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">[Final Project: Makan Is Fun]</a>
+          <a class="navbar-brand" href="#">[Final Project: OSPT]</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="profile.html" target="_blank">Profile</a></li>
+            <li><a href="profile2.html" target="_blank">Profile Lengkap</a></li>
+            <li><a href="kalkulator.html" target="_blank">Kalkulator</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Order <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project & Ebooks <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Makanan</a></li>
-                <li><a href="#">Minuman</a></li>
-                <li><a href="#">Cemilan</a></li>
+                <li class="dropdown-header">Projects</li>
+                <li><a href="https://codelapak.com" target="_blank">Codelapak</a></li>
+                <li><a href="https://jagogame.id" target="_blank">Jagogame</a></li>
                 <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Kenangan</li>
-                <li><a href="#">Mantan</a></li>
-                <li><a href="#">Gebetan</a></li>
+                <li class="dropdown-header">Ebooks</li>
+                <li><a href="#" data-toggle="modal" data-target="#modalEbook1">3 Days with MySQL</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modalEbook2">Odoo ERP</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modalEbook3">PHP e-Commerce</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modalEbook4">PHP Web Donation</a></li>
               </ul>
             </li>
           </ul>
@@ -80,18 +100,112 @@
 	      <span class="sr-only">Next</span>
 	    </a>
 	  </div>
+	  	<h3><center>Contact Me</center></h3>
+		<form action="" method="POST">
+		  <div class="form-group">
+		    <label for="nama">Name</label>
+		    <input type="text" class="form-control" id="nama" placeholder="Name" name="name" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="email">Email</label>
+		    <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="Message">Message</label>
+		    <textarea class="form-control" id="Message" rows="2" name="message" required></textarea>
+		  </div>
+		  <div class="form-group">
+		    <button id="sendMessage" class="btn btn-primary" style="width: 100%;">Send</button>
+		  </div>
+		</form>
 	</div>
-	<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/kodekite@gmail.com" method="post">
-	  <fieldset id="fs-frm-inputs">
-	    <label for="full-name">Full Name</label>
-	    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-	    <label for="email-address">Email Address</label>
-	    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-	    <label for="message">Message</label>
-	    <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
-	    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-	  </fieldset>
-	  <input type="submit" value="Submit">
-	</form>
+
+	<!-- Modal Start -->
+	<div class="modal fade" id="modalEbook1" tabindex="-1" role="dialog" aria-labelledby="modalEbook1Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modalEbook1Label">3 Days with MySQL</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <center><img src="img/ebooks/3days.png"></center>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	        <a href="https://play.google.com/books/reader?id=MbdTDwAAQBAJ&pg=GBS.PP1" target="_blank">
+	        	<button type="button" class="btn btn-primary">Buka Ebook</button>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade" id="modalEbook2" tabindex="-1" role="dialog" aria-labelledby="modalEbook1Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modalEbook1Label">Odoo Open ERP Fundamental</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <center><img src="img/ebooks/odoo.jpg"></center>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	        <a href="https://play.google.com/store/books/details/Basic_Odoo_For_Beginner_Ebook_Odoo_Untuk_Pemula?id=KxhgDwAAQBAJ&hl=en_US" target="_blank">
+	        	<button type="button" class="btn btn-primary">Buka Ebook</button>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade" id="modalEbook3" tabindex="-1" role="dialog" aria-labelledby="modalEbook1Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modalEbook1Label">PHP Build simple e-Commerce</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <center><img src="img/ebooks/php.png"></center>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	        <a href="https://play.google.com/books/reader?id=7jFjDwAAQBAJ&hl=id&printsec=frontcover" target="_blank">
+	        	<button type="button" class="btn btn-primary">Buka Ebook</button>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade" id="modalEbook4" tabindex="-1" role="dialog" aria-labelledby="modalEbook1Label" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modalEbook1Label">PHP Build donation web</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <center><img src="img/ebooks/php.png"></center>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+	        <a href="https://play.google.com/store/books/details/OSPT_72_Hours_Build_Donations_Web_Application?id=pfSHDwAAQBAJ&hl=en_US" target="_blank">
+	        	<button type="button" class="btn btn-primary">Buka Ebook</button>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- End Modal -->
+
 </body>
 </html>
